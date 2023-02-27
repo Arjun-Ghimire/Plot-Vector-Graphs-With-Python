@@ -3,10 +3,22 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-a = np.array([2,5])
-b = np.array([5,3])
+# take two space-separated inputs as a string and split them into a list of two strings
+a_input = input("Enter two vector numbers with a space for eg, 2 3 = ").split()
+b_input = input("Enter two vector numbers with a space for eg, 3 4 = ").split()
 
-c= a-b
+choice = input("What do you want to perform? addition or subtraction? Enter 1 for addition, 2 for subtraction = ")
+
+# convert the list of strings to a NumPy array of floats
+a = np.array([float(x) for x in a_input])
+b = np.array([float(x) for x in b_input])
+
+if choice =="1":
+
+    c = a + b
+
+else : 
+    c = a-b
 
 fig,axis = plt.subplots()
 
@@ -20,5 +32,14 @@ axis.quiver(b[0], b[1], c[0], c[1], angles='xy', scale_units='xy', scale=1, colo
 
 axis.set_xlim([0,10])
 axis.set_ylim([0,10])
+
+axis.set_xlabel('X-axis')
+axis.set_ylabel('Y-axis')
+
+if choice=="1":
+    axis.set_title('Addition of two vectors')
+else:
+    axis.set_title('Subtraction of two vectors')
+
 
 plt.show()
