@@ -9,5 +9,6 @@ Once you did it you are ready to run the program.
 
 You will be asked to enter the value of two vectors, enter the value and chooce to either add the vector or subtract the vector. Once you run the program you will see this output : 
 
-image.png
+![graphs](Addition_Plot.png)
+![graphs](Subtraction Plot.png)
 
