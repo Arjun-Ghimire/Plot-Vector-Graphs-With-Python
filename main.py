@@ -40,6 +40,13 @@ if choice=="1":
     axis.set_title('Addition of two vectors')
 else:
     axis.set_title('Subtraction of two vectors')
+    
+axis.legend()
+
+# Add angle to the vectors
+axis.text(a[0]/2, a[1]/2, f'{np.degrees(np.arctan(a[1]/a[0])):.1f}°', color='b', fontsize=12)
+axis.text(b[0]/2, b[1]/2, f'{np.degrees(np.arctan(b[1]/b[0])):.1f}°', color='g', fontsize=12)
+axis.text(c[0]/2, c[1]/2, f'{np.degrees(np.arctan(c[1]/c[0])):.1f}°', color='r', fontsize=12)
 
 
 plt.show()
